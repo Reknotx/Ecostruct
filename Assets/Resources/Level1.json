@@ -1,0 +1,58 @@
+{
+  "MapWidth": 5,
+  
+  "MapHeight":  5,
+  
+  "MapData": 
+  [
+    {
+      "Type": "Mine",
+
+      "x": 0,
+
+      "y": 0
+    },
+	{
+      "Type": "Junk",
+
+      "x": 2,
+
+      "y": 2
+    },
+	{
+      "Type": "Junk",
+
+      "x": 4,
+
+      "y": 4
+    },
+	{
+      "Type": "Junk",
+
+      "x": 0,
+
+      "y": 4
+    },
+	{
+      "Type": "Junk",
+
+      "x": 4,
+
+      "y": 0
+    },
+	{
+      "Type": "Junk",
+
+      "x": 1,
+
+      "y": 1
+    },
+	{
+      "Type": "Mine",
+
+      "x": 1,
+
+      "y": 0
+    },
+  ]
+}

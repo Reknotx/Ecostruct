@@ -1,0 +1,16 @@
+{
+  "MapWidth":  10,
+  
+  "MapHeight":  10,
+  
+  "MapData": 
+  [
+    {
+      "Type": "Mine",
+
+      "x": 5,
+
+      "y": 5
+    }
+  ]
+}
