@@ -9,7 +9,7 @@ public class Grass : MonoBehaviour
     public Color stage2;
     public Color stage3;
 
-    bool fullyGrown = false;
+    public bool FullyGrown { get; set; }
     int xCor;
     int yCor;
 
@@ -23,11 +23,6 @@ public class Grass : MonoBehaviour
         StartCoroutine(Growth());
     }
 
-    public bool CheckIfFullGrown()
-    {
-        return fullyGrown;
-    }
-
     IEnumerator Growth()
     {
         yield return new WaitForSeconds(2f);
@@ -36,6 +31,6 @@ public class Grass : MonoBehaviour
         yield return new WaitForSeconds(2f);
         gameObject.GetComponent<Renderer>().material.color = stage3;
 
-        fullyGrown = true;
+        FullyGrown = true;
     }
 }

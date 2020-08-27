@@ -7,7 +7,7 @@ public class Trees : MonoBehaviour
 {
     public List<Material> stages = new List<Material>();
 
-    bool fullyGrown = false;
+    public bool FullyGrown { get; set; }
     int xCor;
     int yCor;
 
@@ -21,10 +21,6 @@ public class Trees : MonoBehaviour
         StartCoroutine(Growth());
     }
 
-    public bool CheckIfFullGrown()
-    {
-        return fullyGrown;
-    }
 
     IEnumerator Growth()
     {
@@ -34,6 +30,6 @@ public class Trees : MonoBehaviour
         yield return new WaitForSeconds(2f);
         gameObject.GetComponent<Renderer>().material = stages[2];
 
-        fullyGrown = true;
+        FullyGrown = true;
     }
 }

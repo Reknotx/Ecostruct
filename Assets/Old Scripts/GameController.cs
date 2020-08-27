@@ -216,8 +216,8 @@ public class GameController : MonoBehaviour
             {
                 try
                 {
-                    if ((map[x, y].tag == "Tree" && map[x, y].GetComponent<Trees>().CheckIfFullGrown()) ||
-                        (map[x, y].tag == "Grass" && map[x, y].GetComponent<Grass>().CheckIfFullGrown()))
+                    if ((map[x, y].tag == "Tree" && map[x, y].GetComponent<Trees>().FullyGrown) ||
+                        (map[x, y].tag == "Grass" && map[x, y].GetComponent<Grass>().FullyGrown))
                     {
                         bool northSpreadable = CheckIfNorthSpreadableTile(x, y);
                         bool eastSpreadable = CheckIfEastSpreadableTile(x, y);
@@ -616,10 +616,10 @@ public class GameController : MonoBehaviour
             for (int j = 0; j <= 3; j++)
             {
                 if (
-                   (xCor - i >= 0 && yCor - j >= 0 && map[xCor - i, yCor - j].tag == "Tree" && map[xCor - i, yCor - j].GetComponent<Trees>().CheckIfFullGrown() && CheckIfWithinRange(xCor, yCor, xCor - i, yCor - j, 3)) ||
-                   (xCor + i < mapWidth && yCor + j < mapHeight && map[xCor + i, yCor + j].tag == "Tree" && map[xCor + i, yCor + j].GetComponent<Trees>().CheckIfFullGrown() && CheckIfWithinRange(xCor, yCor, xCor + i, yCor + j, 3)) ||
-                   (xCor - i >= 0 && yCor + j < mapHeight && map[xCor - i, yCor + j].tag == "Tree" && map[xCor - i, yCor + j].GetComponent<Trees>().CheckIfFullGrown() && CheckIfWithinRange(xCor, yCor, xCor - i, yCor + j, 3)) ||
-                   (xCor + i < mapWidth && yCor - j >= 0 && map[xCor + i    , yCor - j].tag == "Tree" && map[xCor + i, yCor - j].GetComponent<Trees>().CheckIfFullGrown() && CheckIfWithinRange(xCor, yCor, xCor + i, yCor - j, 3))
+                   (xCor - i >= 0 && yCor - j >= 0 && map[xCor - i, yCor - j].tag == "Tree" && map[xCor - i, yCor - j].GetComponent<Trees>().FullyGrown && CheckIfWithinRange(xCor, yCor, xCor - i, yCor - j, 3)) ||
+                   (xCor + i < mapWidth && yCor + j < mapHeight && map[xCor + i, yCor + j].tag == "Tree" && map[xCor + i, yCor + j].GetComponent<Trees>().FullyGrown && CheckIfWithinRange(xCor, yCor, xCor + i, yCor + j, 3)) ||
+                   (xCor - i >= 0 && yCor + j < mapHeight && map[xCor - i, yCor + j].tag == "Tree" && map[xCor - i, yCor + j].GetComponent<Trees>().FullyGrown && CheckIfWithinRange(xCor, yCor, xCor - i, yCor + j, 3)) ||
+                   (xCor + i < mapWidth && yCor - j >= 0 && map[xCor + i    , yCor - j].tag == "Tree" && map[xCor + i, yCor - j].GetComponent<Trees>().FullyGrown && CheckIfWithinRange(xCor, yCor, xCor + i, yCor - j, 3))
                    )
                 {
                     return true;
