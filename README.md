@@ -9,5 +9,5 @@ Programmed in is a spread mechanic for the pollution which slowly takes over the
 Gameplay mechanics such as movement and cleaning of tiles were also coded in.
 
 
-Disclaimer: Currently working on a system's overhaul for the code to make it cleaner. Does have some bugs
+Disclaimer: As of 8/23/2020 I am currently working on a system's overhaul for the code to make it cleaner. Does have some bugs
 that are currently being worked out but the old system, which still works, is in the folder labeled Old Scripts.
